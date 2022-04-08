@@ -1,0 +1,5 @@
+*.exe
+save
+gamestate.json
+old
+json_exporter

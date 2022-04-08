@@ -1,0 +1,268 @@
+{
+  "coordinate": {
+    "origin": 182,
+    "x": 121.13249969482422,
+    "y": -31.49625015258789
+  },
+  "date": "2243.11.18",
+  "effect": "Kleinere Artefakte gefunden:\r\n\u0011Y\u0013minor_artifacts|1 1.00\u0011!\r\n",
+  "events": [
+    {
+      "event_id": "first_contact.1",
+      "expired": "no",
+      "scope": {
+        "id": 27,
+        "random": [
+          0,
+          4049908188
+        ],
+        "random_allowed": "yes",
+        "root": {
+          "from": {
+            "id": 5,
+            "random": [
+              0,
+              3707102978
+            ],
+            "random_allowed": "yes",
+            "type": "country"
+          },
+          "id": 27,
+          "random": [
+            0,
+            500036260
+          ],
+          "random_allowed": "yes",
+          "type": "first_contact"
+        },
+        "type": "first_contact"
+      }
+    }
+  ],
+  "flags": {
+    "Story1": 62814840,
+    "Story5": 62817264,
+    "Story7": 62899104,
+    "StoryFirst": 62814840,
+    "already_built_habitat": 63160056,
+    "anomaly_life_asteroid_category": 62933400,
+    "anomaly_outcome_happened_anomaly.120": 62864544,
+    "anomaly_outcome_happened_anomaly.135": 62961000,
+    "anomaly_outcome_happened_anomaly.225": 63093528,
+    "anomaly_outcome_happened_anomaly.2530": 62851320,
+    "anomaly_outcome_happened_anomaly.2540": 63110736,
+    "anomaly_outcome_happened_anomaly.2550": 63068544,
+    "anomaly_outcome_happened_anomaly.3005": 63119904,
+    "anomaly_outcome_happened_anomaly.4010": 63131904,
+    "anomaly_outcome_happened_anomaly.50": 62921184,
+    "anomaly_outcome_happened_anomaly.60": 62907624,
+    "anomaly_outcome_happened_anomaly.600": 62902464,
+    "anomaly_outcome_happened_anomaly.605": 62896680,
+    "anomaly_outcome_happened_anomaly.610": 63121848,
+    "anomaly_outcome_happened_anomaly.625": 63043632,
+    "anomaly_outcome_happened_anomaly.630": 62838648,
+    "anomaly_outcome_happened_anomaly.635": 63039672,
+    "anomaly_outcome_happened_anomaly.650": 62832096,
+    "anomaly_outcome_happened_anomaly.660": 62955864,
+    "anomaly_outcome_happened_anomaly.6786": 62931696,
+    "anomaly_outcome_happened_anomaly.6825": 62935080,
+    "anomaly_outcome_happened_anomaly.6875": 63078672,
+    "anomaly_outcome_happened_anomaly.690": 62958960,
+    "anomaly_outcome_happened_anomaly.6905": 62962104,
+    "anomaly_outcome_happened_anomaly.7030": 62944272,
+    "anomaly_outcome_happened_anomaly.705": 62871816,
+    "anomaly_outcome_happened_anomaly.75": 63063984,
+    "anomaly_outcome_happened_distar.3020": 62885352,
+    "anomaly_outcome_happened_precursor.1540": 63007104,
+    "anomaly_outcome_happened_precursor.1545": 63119376,
+    "anomaly_outcome_happened_precursor.1550": 63031152,
+    "archaeologist_achievement": 63171072,
+    "arctic_surveyed": 62882568,
+    "asteroid_surveyed": 62839128,
+    "barren_cold_surveyed": 62811120,
+    "barren_surveyed": 62812080,
+    "continental_surveyed": 62814120,
+    "crystals_encountered": 62959392,
+    "curator_intro": 63038328,
+    "custom_start_screen": 62808000,
+    "desert_surveyed": 62932272,
+    "encountered_first_wormhole": 63075432,
+    "entered_war_as_defender": {
+      "flag_date": 63152136,
+      "flag_days": 5742
+    },
+    "espionage_operation_targeted_by1": {
+      "flag_date": 63178584,
+      "flag_days": 10444
+    },
+    "exotic_gases_found": 63099672,
+    "first_alien_life": 62814120,
+    "first_colony": 62923752,
+    "first_contact_apparent_hostility_chain": 63073944,
+    "first_contact_completed1": 62949288,
+    "first_contact_completed17": 62959392,
+    "first_contact_completed21": 63081960,
+    "first_contact_completed4": 63036480,
+    "first_contact_event": 62949288,
+    "first_contact_protocol_event_happened": 62815272,
+    "first_faction": 63179040,
+    "first_spynetwork": 62950536,
+    "frozen_surveyed": 62821320,
+    "gas_giant_surveyed": 62819232,
+    "habitable_worlds_survey": 62866200,
+    "has_encountered_other_empire": 62899104,
+    "irassian_intro": 62816544,
+    "irassians_10": 63031152,
+    "irassians_6": 62823120,
+    "irassians_8": 63007104,
+    "irassians_9": 63119376,
+    "molten_surveyed": 62814360,
+    "nuked_surveyed": 62999760,
+    "ocean_surveyed": 62929248,
+    "outer_system_mining_stations_constructed": 63144960,
+    "recent_first_contact_process_started": {
+      "flag_date": 63071568,
+      "flag_days": 2385
+    },
+    "starting_event": 62819088,
+    "toxic_surveyed": 62817360,
+    "tutorial_level_picked": 62808000,
+    "void_clouds_encountered": 63081960,
+    "volatile_motes_found": 62953392,
+    "zro_found": 62920752
+  },
+  "floatnegative": -1.2034800052642822,
+  "floatthing": 1.2034800052642822,
+  "intel_manager": {
+    "intel": [
+      {
+        "1": {
+          "intel": 70,
+          "stale_intel": {}
+        }
+      }
+    ]
+  },
+  "name": "Elda 7",
+  "numbernegative": -34243,
+  "player": [
+    {
+      "country": 0,
+      "name": "mintsbot"
+    },
+    {
+      "country": 1,
+      "name": "tobi"
+    }
+  ],
+  "random_log_day": 0,
+  "required_dlcs": [
+    "Anniversary Portraits",
+    "Apocalypse",
+    "Federations",
+    "Horizon Signal",
+    "Leviathans Story Pack",
+    "Synthetic Dawn Story Pack",
+    "Utopia"
+  ],
+  "species_db": {
+    "0": {
+      "gender": "not_set",
+      "traits": {}
+    },
+    "1": {
+      "adjective": "Elisch",
+      "class": "HUM",
+      "gender": "male",
+      "home_planet": 17,
+      "name": "Elda",
+      "name_list": "HUM1",
+      "plural": "Elda",
+      "portrait": "humanoid_04",
+      "traits": {
+        "trait": [
+          "trait_pc_habitat_preference",
+          "trait_ingenious",
+          "trait_solitary",
+          "trait_nonadaptive",
+          "trait_natural_engineers",
+          "trait_void_dweller_1",
+          "trait_intelligent"
+        ]
+      }
+    }
+  },
+  "spy_networks": [
+    52,
+    56,
+    221,
+    218,
+    16777453,
+    16777452,
+    16777479,
+    16777376,
+    50331792
+  ],
+  "starbase_mgr": {
+    "starbases": {
+      "0": {
+        "build_queue": 603,
+        "buildings": {
+          "0": "hydroponics_bay"
+        },
+        "level": "starbase_level_starhold",
+        "modules": {
+          "0": "shipyard",
+          "1": "trading_hub"
+        },
+        "orbitals": {
+          "0": 4294967295,
+          "1": 4294967295,
+          "2": 4294967295
+        },
+        "owner": 0,
+        "ship_design": 29,
+        "shipyard_build_queue": 604,
+        "station": 0
+      },
+      "1": {
+        "build_queue": 605,
+        "buildings": {
+          "0": "crew_quarters"
+        },
+        "level": "starbase_level_starport",
+        "modules": {
+          "0": "shipyard",
+          "1": "trading_hub"
+        },
+        "orbitals": {
+          "0": 16777493,
+          "1": 33555269,
+          "10": 4294967295,
+          "11": 16777901,
+          "2": 4294967295,
+          "3": 4294967295,
+          "4": 352,
+          "5": 16777939,
+          "6": 4294967295,
+          "7": 733,
+          "8": 4294967295,
+          "9": 843
+        },
+        "owner": 1,
+        "ship_design": 59,
+        "shipyard_build_queue": 606,
+        "station": 9
+      }
+    }
+  },
+  "tick": 2,
+  "unkown": {
+    "shit": "happens"
+  },
+  "variables": [
+    "unrest_50"
+  ],
+  "version": "Libra v3.3.2",
+  "version_control_revision": 86054
+}

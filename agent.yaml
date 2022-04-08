@@ -1,0 +1,29 @@
+server:
+  log_level: debug
+  http_listen_port: 9100
+
+metrics:
+  wal_directory: C:\Users\rip\AppData\Local\Temp
+  global:
+    scrape_interval: 60s
+    remote_write:
+      - url: https://prometheus-prod-01-eu-west-0.grafana.net/api/prom/push
+        basic_auth:
+          username: 253892
+          password: "eyJrIjoiMTY1YTU4NGUxOGRmMTdmY2YyZDhkNTk4Yzc3ODU4MzJmMjMyZDQxNyIsIm4iOiJ3aW5kb3dzTWV0cmljcyIsImlkIjo1NjU0MTB9"
+  configs:
+    - name: default
+      scrape_configs:
+        - job_name: stellaris
+          static_configs:
+            - targets: ["127.0.0.1:2112"]
+        - job_name: node
+          static_configs:
+            - targets: ["127.0.0.1:9100"]
+
+integrations:
+  node_exporter:
+    enabled: true
+  process_exporter:
+    enabled: true
+# ./grafana-agent.exe --config.file=./agent-config.yaml
