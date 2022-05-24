@@ -17,8 +17,10 @@ default:
 
 we interested in:
 
+- year, month,day
 - resource production
 - population
 - tech points
 - techs archieved
 - military score
+- market prices, fluctuations, solds, buys

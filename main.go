@@ -9,6 +9,7 @@ import (
 	"path/filepath"
 	"time"
 
+	"github.com/mitchellh/mapstructure"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promauto"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
@@ -22,6 +23,39 @@ var (
 	})
 )
 
+type GameState struct {
+	Version                  string                 `json:"version"`
+	Name                     string                 `json:"name"`
+	Version_control_revision int                    `json:"version_control_revision=86097"`
+	Date                     string                 `json:"date"`
+	Required_dlcs            []string               `json:"required_dlcs"`
+	Player                   []Player               `json:"player"`
+	Market                   Market                 `json market`
+	X                        map[string]interface{} `json:"-"` // Rest of the fields should go here.
+}
+
+type Player struct {
+	Country int    `json:country`
+	Name    string `json:name`
+}
+
+type Market struct {
+	Monthly_trades []MarketMonTrades
+}
+
+type MarketMonTrades struct {
+	Trade_data TradeData
+	Amount     int
+	Price      int
+	Id         int
+}
+
+type TradeData struct {
+	Trade_type string
+	Resource   string
+	Country    int
+}
+
 func recordMetrics() {
 	go func() {
 		for {
@@ -31,7 +65,7 @@ func recordMetrics() {
 	}()
 }
 
-func parse(f string) ([]byte, error) {
+func parse(f string) (map[string]interface{}, error) {
 	fp, err := os.Open(f)
 	if err != nil {
 		return nil, err
@@ -40,7 +74,7 @@ func parse(f string) ([]byte, error) {
 	defer fp.Close()
 
 	parser := parser.NewParser(fp)
-	data, ln, err := parser.Parse()
+	data, _, err := parser.Parse()
 	if err != nil {
 		return nil, err
 	}
@@ -53,19 +87,21 @@ func parse(f string) ([]byte, error) {
 	// if err != nil {
 	// 	return nil, err
 	// }
-	// return b, nil
+
+	// err = os.WriteFile("gamestate.json", b, 0644)
+	// if err != nil {
+	// 	fmt.Println("error:", err)
+	// 	return
+	// }
+
 }
 
-// recordMetrics()
-// fmt.Println("running")
-// http.Handle("/metrics", promhttp.Handler())
-// http.ListenAndServe(":2112", nil)
 //fp, err := os.Open(filepath.Join("save", "ln.txt"))
 //fp, err := os.Open(filepath.Join("test", "short.txt"))
 //fp, err := os.Open(filepath.Join("save", "intel.txt"))
 
 func respJson(w http.ResponseWriter, r *http.Request) {
-	data, err := parse(filepath.Join("save", "short"))
+	data, err := parse(filepath.Join("test", "gamestate"))
 	if err != nil {
 		log.Println(err)
 		return
@@ -80,16 +116,19 @@ func handleRequest() {
 }
 
 func main() {
-
-	//b, err := parse(filepath.Join("save", "short"))
-	//b, err := parse(filepath.Join("save", "gamestate"))
-	fmt.Println("running")
+	// fmt.Println("running")
 	handleRequest()
 
-	// err = os.WriteFile("gamestate.json", b, 0644)
-	// if err != nil {
-	// 	fmt.Println("error:", err)
-	// 	return
-	// }
+	data, err := parse(filepath.Join("test", "short.txt"))
+	if err != nil {
+		log.Println(err)
+		return
+	}
 
+	game := &GameState{}
+	err = mapstructure.Decode(data, &game)
+	if err != nil {
+		// error
+	}
+	fmt.Print(game)
 }

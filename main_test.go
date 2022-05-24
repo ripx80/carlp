@@ -300,7 +300,7 @@ func TestGet(t *testing.T) {
 }
 
 /*TestCompGet will broke the structure, dont run it*/
-func NOTestShortFile(t *testing.T) {
+func TestShortFile(t *testing.T) {
 	fp, err := os.Open(filepath.Join("test", "short.txt"))
 	if err != nil {
 		t.Error(err)
